@@ -1,0 +1,7 @@
+1.Use pip install run the commend in terminal:
+pip install flask requests pymessenger
+
+
+2.Use ngrok for setup webhook :
+Link : https://ngrok.com/
+
