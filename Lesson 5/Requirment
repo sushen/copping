@@ -1,10 +1,17 @@
-Eco Bot:
-1:Necessary Code that extract json data facebook send
+BE Global:
+1:Heroku Account
 
-2:import bot from pymessenger
+2:Heruku CLI
+Link: https://devcenter.heroku.com/articles/heroku-cli
 
-3:Facebook Access Token
+3:Git CLi
+Link: https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line
 
+4: pip install gunicorn
+
+5. pip freeze > requirements.txt
+
+6. echo > Procfile
 
 
 
