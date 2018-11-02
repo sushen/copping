@@ -57,6 +57,6 @@ def log(message):
     pprint(message)
     sys.stdout.flush()
 
-
+# For heroku deployment Remove port
 if __name__ == "__main__":
-    app.run(port=80, use_reloader=True)
+    app.run(use_reloader=True)
