@@ -1,5 +1,5 @@
 import sys
-from flask import Flask, request
+from flask import Flask, request, render_template
 from pprint import pprint
 from pymessenger import Bot
 from utils import wit_response, get_news_elements
@@ -56,6 +56,11 @@ def log(message):
     # previously it was print now I just Use Petty Print
     pprint(message)
     sys.stdout.flush()
+
+# for facebook apps Privacy-Policy necessary
+@app.route('/Privacy-Policy')
+def PrivacyPolicy():
+	return render_template("Privacy-Policy.html")
 
 # For heroku deployment Remove port
 if __name__ == "__main__":
