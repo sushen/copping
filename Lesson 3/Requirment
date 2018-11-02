@@ -1,7 +1,8 @@
-1.Use pip install run the commend in terminal:
-pip install flask requests pymessenger
+1.Change Web Hook every time when you start the project and test outpur
+Go to: developer.facebook.com > Your apps > Webhook
+
+and replace it to new ngrok url
 
 
-2.Use ngrok for setup webhook :
-Link : https://ngrok.com/
+
 
