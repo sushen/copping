@@ -2,11 +2,15 @@ import sys
 from flask import Flask, request
 from pprint import pprint
 from pymessenger import Bot
+from utils import wit_response, get_news_elements
+
 
 app = Flask(__name__)
 
 FB_ACCESS_TOKEN = "EAAagZBYCBTiMBAB4g8uZBOiS2DwnjCSVTPEwBZA9wdJyfCbZBVeWg0FPMMjYoUDwZAZBHGQ8lAfbIZBmCmOaOsNLu2XJkVHwJIrUd6Bu48GN096mO3VKVDf6A6VtFJywHxJk7IRb3RqLiHRT2Ry8OAWbA39mUwm45onyaYjx2g1AgZDZD"
 bot = Bot(FB_ACCESS_TOKEN)
+
+VERIFICATION_TOKEN = "hello"
 
 
 @app.route('/', methods=['GET'])
@@ -40,9 +44,10 @@ def webhook():
                     else:
                         messaging_text = 'no text'
 
-                    # Echo Bot
-                    response = messaging_text
-                    bot.send_text_message(sender_id, response)
+                    # Code for Messenger Template
+                    categories = wit_response(messaging_text)
+                    elements = get_news_elements(categories)
+                    bot.send_generic_message(sender_id, elements)
 
     return "ok", 200
 
