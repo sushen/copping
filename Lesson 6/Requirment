@@ -1,26 +1,7 @@
-BE Global Use Heroku:
-1:Heroku Account
-
-2:Heruku CLI
-Link: https://devcenter.heroku.com/articles/heroku-cli
-You dont need that if you user heroku gui and directly deploy form there
-
-3:Git CLi
-Link: https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line
+1. Change heroku web hook to agrok url for local testing
+# Go to facebook apps webhook and change url and VERIFICATION_TOKEN
 
 
-4: pip install gunicorn
-
-5. pip freeze > requirements.txt
-
-6. echo > Procfile
-
-7.change web hook url
-change ngrok url to heroku url
-
-8.wit ai account
-Link: https://wit.ai/
-pip install wit
 
 
 

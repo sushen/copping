@@ -4,6 +4,7 @@ from pprint import pprint
 from pymessenger import Bot
 from utils import wit_response
 
+
 app = Flask(__name__)
 
 FB_ACCESS_TOKEN = "EAAagZBYCBTiMBAB4g8uZBOiS2DwnjCSVTPEwBZA9wdJyfCbZBVeWg0FPMMjYoUDwZAZBHGQ8lAfbIZBmCmOaOsNLu2XJkVHwJIrUd6Bu48GN096mO3VKVDf6A6VtFJywHxJk7IRb3RqLiHRT2Ry8OAWbA39mUwm45onyaYjx2g1AgZDZD"

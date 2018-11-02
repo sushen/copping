@@ -2,7 +2,8 @@ import sys
 from flask import Flask, request
 from pprint import pprint
 from pymessenger import Bot
-from utils import wit_response
+from utils import wit_response, get_news_elements
+
 
 app = Flask(__name__)
 
@@ -43,19 +44,10 @@ def webhook():
                     else:
                         messaging_text = 'no text'
 
-                    # replace Echo Bot to wit ai
-                    response = None
-
-                    entity, value = wit_response(messaging_text)
-                    if entity == 'newstype':
-                        response = "Ok, I will send you the {} news".format(str(value))
-                    elif entity == 'location':
-                        response = "Ok, so you live in {0}. Here are top headlines from {0}".format(str(value))
-
-                    if response == None:
-                        response = "Sorry, I didnt understand"
-
-                    bot.send_text_message(sender_id, response)
+                    # Code for Messenger Template
+                    categories = wit_response(messaging_text)
+                    elements = get_news_elements(categories)
+                    bot.send_generic_message(sender_id, elements)
 
     return "ok", 200
 
