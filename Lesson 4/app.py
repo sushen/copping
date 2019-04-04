@@ -1,7 +1,6 @@
 import sys
 from flask import Flask, request
 from pprint import pprint
-from pymessenger import Bot
 
 app = Flask(__name__)
 
